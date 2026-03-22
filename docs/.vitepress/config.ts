@@ -51,8 +51,8 @@ export default defineConfig({
       /* 4. 图片本身：初始状态必须设为 top:0; left:0; 才能实现完全重叠 */
       .VPImage.image-src {
         position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
+        top: 2 !important;
+        left: 2 !important;
         margin: 0 !important; /* 💡 强制清除 VitePress 默认的 margin */
         width: 100% !important;
         height: 100% !important;
