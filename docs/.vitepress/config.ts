@@ -10,7 +10,7 @@ export default defineConfig({
         display: inline-block;
         width: 320px; 
         height: 320px;
-        margin-left: 80px; /* 💡 整体向右偏移量，你可以根据视觉效果微调这个值 */
+        margin-left: 120px; /* 💡 整体向右偏移量，你可以根据视觉效果微调这个值 */
       }
 
       /* 2. 底色背景块：作为基准层 */
