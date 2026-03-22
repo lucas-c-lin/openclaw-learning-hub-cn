@@ -8,7 +8,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '快速入门', link: '/guide/getting-started' }
+      { text: '精选教程', link: '/guide/tutorials' },
+      { text: '产品对比', link: '/comparison/products' },
+      { text: '主机对比', link: '/comparison/hardware' },
+      { text: '模型对比', link: '/models/pricing' }
     ],
     // docs/.vitepress/config.ts 核心修改部分
     sidebar: [
