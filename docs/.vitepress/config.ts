@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/openclaw-learning-hub-cn/',
   title: "OpenClaw Learning Hub",
   description: "精选 OpenClaw 中文资源与硬件/模型对比指南",
   lang: 'zh-CN',
