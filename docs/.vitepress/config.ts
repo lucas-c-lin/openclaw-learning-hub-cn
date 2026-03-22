@@ -4,32 +4,16 @@ export default defineConfig({
   // 💡 调整 head 里的 CSS，实现“右下角 45° 闪开”和“位置向右偏移”
   head: [
     ['style', {}, `
-      /* 1. 给图片容器设置相对定位，并整体向右偏移 */
+      /* 1. 容器：决定整体位置。通过 margin-left 整体往右挪，不影响内部对齐 */
       .VPHero .image-container {
         position: relative;
         display: inline-block;
         width: 320px; 
         height: 320px;
-        margin-left: 100px; /* 💡 让整个图片框往右挪一点，避开文字标题 */
+        margin-left: 80px; /* 💡 整体向右偏移量，你可以根据视觉效果微调这个值 */
       }
 
-      /* 2. 底层彩蛋文字：默认就在那里，只是被图片压住了 */
-      .VPHero .image-container::after {
-        content: '🤖 哇哦！发现了 OpenClaw 的秘密基地！这里有教程、产品、主机和模型对比哦！🎉';
-        position: absolute;
-        top: 50%; /* 垂直居中 */
-        left: 50%;
-        transform: translate(-50%, -50%); /* 确保文字在方块中心 */
-        width: 80%;
-        text-align: center;
-        font-size: 16px;
-        color: #86868b;
-        font-weight: 600;
-        z-index: 1;
-        line-height: 1.5;
-      }
-
-      /* 3. 底色背景块：像个容器一样垫在下面 */
+      /* 2. 底色背景块：作为基准层 */
       .VPHero .image-container::before {
         content: '';
         position: absolute;
@@ -39,25 +23,49 @@ export default defineConfig({
         height: 100%;
         border-radius: 40px;
         background-color: #f5f5f7;
-        z-index: 0;
-        box-shadow: inset 0 2px 10px rgba(0,0,0,0.05); /* 加一点内阴影，更有深度感 */
+        z-index: 1;
+        box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
       }
 
-      /* 4. 图片本身：初始位置盖死 */
-      .VPImage.image-src {
+      /* 3. 底层彩蛋文字：在背景块之上，图片之下 */
+      .VPHero .image-container::after {
+        content: '🤖 哇哦！发现了 OpenClaw 的秘密基地！这里有教程、产品、主机和模型对比哦！🎉';
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2; /* 压在文字上面 */
-        border-radius: 40px !important;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.15) !important;
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; /* 增加一点弹性动画 */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        color: #86868b;
+        font-weight: 600;
+        padding: 40px;
+        box-sizing: border-box;
+        z-index: 2;
+        line-height: 1.5;
       }
 
-      /* 5. 💡 核心改动：鼠标悬停时，向右下角 45° 移走 */
+      /* 4. 图片本身：初始状态必须设为 top:0; left:0; 才能实现完全重叠 */
+      .VPImage.image-src {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important; /* 💡 强制清除 VitePress 默认的 margin */
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 3; /* 最顶层 */
+        border-radius: 40px !important;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15) !important;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important; /* 丝滑的苹果式动画 */
+      }
+
+      /* 5. 悬停效果：向右下 45° 弹出 */
       .VPHero .image-container:hover .VPImage.image-src {
-        transform: translate(120%, 120%) rotate(15deg) !important; /* 向右下平移并带点旋转 */
-        opacity: 0.1; /* 变透明一点，让焦点回到文字上 */
+        transform: translate(105%, 105%) rotate(12deg) !important; 
+        opacity: 0.2;
         box-shadow: 0 0 0 rgba(0,0,0,0) !important;
       }
     `]
