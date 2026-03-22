@@ -10,19 +10,25 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '快速入门', link: '/guide/getting-started' }
     ],
+    // docs/.vitepress/config.ts 核心修改部分
     sidebar: [
       {
-        text: '📖 核心教程',
+        text: '📖 教程资源',
         items: [
-          { text: '快速上手指南', link: '/guide/getting-started' },
-          { text: '常见问题避坑', link: '/guide/faq' },
+          { text: '精选教程汇总', link: '/guide/tutorials' },
         ]
       },
       {
-        text: '💰 成本与硬件',
+        text: '🤖 产品与硬件',
         items: [
-          { text: '模型 API 售价对比', link: '/models/pricing' },
-          { text: '硬件选购建议', link: '/hardware/buying-guide' },
+          { text: '主流产品汇总与对比', link: '/comparison/products' },
+          { text: '核心硬件清单与选型', link: '/comparison/hardware' },
+        ]
+      },
+      {
+        text: '💡 AI 模型相关',
+        items: [
+          { text: '模型接入汇总与售价', link: '/models/pricing' },
         ]
       }
     ],
