@@ -5,6 +5,10 @@ hero:
   name: "OpenClaw Learning Hub"
   text: "中文资源精选汇总"
   tagline: "精选教程 · 产品对比 · 主机硬件 · 模型售价。<br>让开发更简单。"
+  # 💡 增加以下图片配置
+  image:
+    src: /hero-group.png  # 注意这里直接写 / 加上文件名，不用写 public
+    alt: OpenClaw Logo
   actions:
     - theme: brand
       text: 🚀 快速开始
