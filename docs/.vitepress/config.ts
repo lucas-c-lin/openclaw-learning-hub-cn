@@ -1,41 +1,45 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // 💡 精简后的样式：保留苹果味圆角和阴影，移除复杂的层级与彩蛋文字
+  // 💡 彻底静态化：取消所有位移(transform)效果，确保全设备显示一致
   head: [
     ['style', {}, `
-      /* 1. 容器适配：确保在不同设备上图片都能处于合理位置 */
+      /* 1. 容器适配：回归标准流，解决手机端重叠问题 */
       .VPHero .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 0; /* 默认居中，由 VitePress 布局控制 */
+        margin-left: 0; 
       }
 
-      /* 2. 静态图片样式：核心在于大圆角和多层阴影叠加 */
+      /* 2. 静态图片样式：强化苹果式圆角与呼吸感阴影 */
       .VPImage.image-src {
-        border-radius: 44px !important; /* 经典的苹果图标圆角比例 */
+        border-radius: 44px !important; 
         box-shadow: 
           0 10px 20px rgba(0,0,0,0.1), 
           0 20px 50px rgba(0,0,0,0.15) !important; 
-        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+        transition: all 0.4s ease !important; /* 平滑过渡 */
         max-width: 100%;
         height: auto;
+        transform: none !important; /* 强制初始状态不位移 */
       }
 
-      /* 3. 轻微的交互：仅保留向上的微浮动，不再向右下角弹走 */
+      /* 3. 悬停反馈：取消“跑路”效果，改为原地轻微缩放 */
       .VPImage.image-src:hover {
-        transform: translateY(-8px) scale(1.01) !important;
+        transform: scale(1.02) !important; /* 仅在原地轻微放大，不产生坐标位移 */
         box-shadow: 
           0 15px 30px rgba(0,0,0,0.12), 
           0 30px 70px rgba(0,0,0,0.2) !important;
       }
 
-      /* 4. 移动端微调：确保图片在小屏幕上不会过大 */
+      /* 4. 移动端兼容性补丁 */
       @media (max-width: 960px) {
         .VPImage.image-src {
           border-radius: 32px !important;
           max-width: 280px !important;
+        }
+        .VPHero .image-container {
+          margin-top: 24px; /* 手机端标题下方留出间距 */
         }
       }
     `]

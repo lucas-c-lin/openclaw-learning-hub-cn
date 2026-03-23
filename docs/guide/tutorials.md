@@ -2,7 +2,7 @@
 
 这里人工筛选了 OpenClaw 最值得阅读的第三方教程，涵盖从零组装到进阶开发。
 
-### 🌟 入门首选
+### 🌟 入门首选！！！
 
 #### OpenClaw 中文社区站
 [OpenClaw 中文社区]https://clawd.org.cn/
