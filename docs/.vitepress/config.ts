@@ -28,7 +28,8 @@ export default defineConfig({
       .VPImage.image-src {
         width: 100% !important;
         max-width: 450px !important;
-        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: contain !important;
         border-radius: 44px !important; 
         box-shadow: 
           0 10px 20px rgba(0,0,0,0.1), 
