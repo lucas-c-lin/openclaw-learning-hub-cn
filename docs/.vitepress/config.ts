@@ -15,12 +15,10 @@ export default defineConfig({
       .VPHero .container { flex: 1 !important; }
       .VPHero .image-container { 
         flex: 0 0 450px !important;
-        min-height: 400px !important;
-        /* 下面这些可以加上来微调位置 */
-        margin-left: 0;      /* 左边间距 */
-        margin-right: 20;     /* 右边间距 */
-        margin-top: 0;       /* 上边间距 */
-        margin-bottom: 20;    /* 下边间距 */
+        min-height: 450px !important;
+        aspect-ratio: 1 / 1 !important;
+        margin-left: -20px !important;
+        margin-top: -20px !important;
       }
 
       /* 1. 图片容器 - 显示在右侧 */
