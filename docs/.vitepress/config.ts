@@ -13,16 +13,25 @@ export default defineConfig({
         gap: 60px !important;
       }
       .VPHero .container { flex: 1 !important; }
-      .VPHero .image-container { flex: 0 0 450px !important; min-height: 400px !important; }
+      .VPHero .image-container { 
+        flex: 0 0 450px !important;
+        min-height: 400px !important;
+        /* 下面这些可以加上来微调位置 */
+        margin-left: 0;      /* 左边间距 */
+        margin-right: 0;     /* 右边间距 */
+        margin-top: 0;       /* 上边间距 */
+        margin-bottom: 0;    /* 下边间距 */
+      }
 
       /* 1. 图片容器 - 显示在右侧 */
       /* 已移至上面的 .VPHero .image-container */
 
-      /* 2. 静态图片样式：大号图片 500px */
+      /* 2. 静态图片样式：大号图片 500px 保持 1:1 */
       .VPImage.image-src {
         width: 100% !important;
         max-width: 500px !important;
-        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: cover !important;
         border-radius: 44px !important; 
         box-shadow: 
           0 10px 20px rgba(0,0,0,0.1), 
@@ -56,6 +65,7 @@ export default defineConfig({
         .VPImage.image-src {
           border-radius: 32px !important;
           max-width: 320px !important;
+          aspect-ratio: 1 / 1 !important;
         }
       }
     `]
