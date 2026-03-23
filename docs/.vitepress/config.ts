@@ -31,7 +31,7 @@ export default defineConfig({
       }
 
       .VPImage.image-src {
-        position: absolute !important; top: 0 !important; left: 0 !important;
+        position: absolute !important; top: 2 !important; left: 2 !important;
         margin: 0 !important; width: 100% !important; height: 100% !important;
         z-index: 3; border-radius: 40px !important;
         box-shadow: 0 20px 50px rgba(0,0,0,0.15) !important;
