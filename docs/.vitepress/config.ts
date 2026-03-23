@@ -18,9 +18,9 @@ export default defineConfig({
         min-height: 400px !important;
         /* 下面这些可以加上来微调位置 */
         margin-left: 0;      /* 左边间距 */
-        margin-right: 0;     /* 右边间距 */
+        margin-right: 20;     /* 右边间距 */
         margin-top: 0;       /* 上边间距 */
-        margin-bottom: 0;    /* 下边间距 */
+        margin-bottom: 20;    /* 下边间距 */
       }
 
       /* 1. 图片容器 - 显示在右侧 */
@@ -29,7 +29,7 @@ export default defineConfig({
       /* 2. 静态图片样式：大号图片 500px 保持 1:1 */
       .VPImage.image-src {
         width: 100% !important;
-        max-width: 500px !important;
+        max-width: 800px !important;
         aspect-ratio: 1 / 1 !important;
         object-fit: cover !important;
         border-radius: 44px !important; 
