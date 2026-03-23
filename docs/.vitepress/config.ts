@@ -15,7 +15,7 @@ export default defineConfig({
       .VPHero .container { flex: 1 !important; }
       .VPHero .image-container { 
         flex: 0 0 450px !important;
-        min-height: 900px !important;
+        min-height: 450px !important;
         aspect-ratio: 1 / 1 !important;
         margin-left: -60px !important;
         margin-top: -60px !important;
@@ -24,12 +24,11 @@ export default defineConfig({
       /* 1. 图片容器 - 显示在右侧 */
       /* 已移至上面的 .VPHero .image-container */
 
-      /* 2. 静态图片样式：大号图片 500px 保持 1:1 */
+      /* 2. 静态图片样式：1:1 正方形 */
       .VPImage.image-src {
         width: 100% !important;
-        max-width: 800px !important;
-        aspect-ratio: 1 / 1 !important;
-        object-fit: cover !important;
+        max-width: 450px !important;
+        height: auto !important;
         border-radius: 44px !important; 
         box-shadow: 
           0 10px 20px rgba(0,0,0,0.1), 
