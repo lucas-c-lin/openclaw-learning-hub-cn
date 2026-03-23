@@ -10,15 +10,15 @@ export default defineConfig({
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        gap: 10px !important;
+        gap: 0px !important;
       }
       .VPHero .container { flex: 1 !important; }
       .VPHero .image-container { 
         flex: 0 0 450px !important;
-        min-height: 450px !important;
+        min-height: 900px !important;
         aspect-ratio: 1 / 1 !important;
-        margin-left: -40px !important;
-        margin-top: -40px !important;
+        margin-left: -60px !important;
+        margin-top: -60px !important;
       }
 
       /* 1. 图片容器 - 显示在右侧 */
