@@ -4,34 +4,31 @@ export default defineConfig({
   // 💡 彻底静态化：取消所有位移(transform)效果，确保全设备显示一致
   head: [
     ['style', {}, `
-      /* 0. Hero 整体调整：标题在左，图片在右 */
+      /* 0. Hero 整体调整：完整解决方案 */
       .VPHero {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 60px !important;
       }
+      .VPHero .container { flex: 1 !important; }
+      .VPHero .image-container { flex: 0 0 450px !important; min-height: 400px !important; }
 
       /* 1. 图片容器 - 显示在右侧 */
-      .VPHero .image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 40px;
-        margin-right: 0;
-        flex: 0 0 auto;
-      }
+      /* 已移至上面的 .VPHero .image-container */
 
-      /* 2. 静态图片样式：强化苹果式圆角与呼吸感阴影 */
+      /* 2. 静态图片样式：大号图片 500px */
       .VPImage.image-src {
+        width: 100% !important;
+        max-width: 500px !important;
+        height: auto !important;
         border-radius: 44px !important; 
         box-shadow: 
           0 10px 20px rgba(0,0,0,0.1), 
           0 20px 50px rgba(0,0,0,0.15) !important; 
-        transition: all 0.4s ease !important; /* 平滑过渡 */
-        max-width: 100%;
-        height: auto;
-        transform: none !important; /* 强制初始状态不位移 */
+        transition: all 0.4s ease !important;
+        transform: none !important;
       }
 
       /* 3. 悬停反馈：取消“跑路”效果，改为原地轻微缩放 */
@@ -46,15 +43,19 @@ export default defineConfig({
       @media (max-width: 960px) {
         .VPHero {
           flex-direction: column !important;
+          gap: 30px !important;
+        }
+        .VPHero .container {
+          order: 1 !important;
+        }
+        .VPHero .image-container {
+          order: 2 !important;
+          flex: none !important;
+          min-height: auto !important;
         }
         .VPImage.image-src {
           border-radius: 32px !important;
-          max-width: 280px !important;
-        }
-        .VPHero .image-container {
-          margin-top: 24px;
-          margin-left: 0;
-          margin-right: 0;
+          max-width: 320px !important;
         }
       }
     `]
