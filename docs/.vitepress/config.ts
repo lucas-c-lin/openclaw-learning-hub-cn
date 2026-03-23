@@ -4,69 +4,68 @@ export default defineConfig({
   // 💡 调整 head 里的 CSS，实现“右下角 45° 闪开”和“位置向右偏移”
   head: [
     ['style', {}, `
-      /* 1. 容器：决定整体位置。通过 margin-left 整体往右挪，不影响内部对齐 */
+      /* ============================================================
+        1. 通用样式与电脑端定义 (桌面优先)
+        ============================================================ */
       .VPHero .image-container {
         position: relative;
         display: inline-block;
         width: 320px; 
         height: 320px;
-        margin-left: 120px; /* 💡 整体向右偏移量，你可以根据视觉效果微调这个值 */
+        margin-left: 80px; /* 电脑端偏移量 */
       }
 
-      /* 2. 底色背景块：作为基准层 */
       .VPHero .image-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 40px;
-        background-color: #f5f5f7;
-        z-index: 1;
+        content: ''; position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; border-radius: 40px;
+        background-color: #f5f5f7; z-index: 1;
         box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
       }
 
-      /* 3. 底层彩蛋文字：在背景块之上，图片之下 */
       .VPHero .image-container::after {
         content: '🤖 哇哦！发现了 OpenClaw 的秘密基地！这里有教程、产品、主机和模型对比哦！🎉';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 16px;
-        color: #86868b;
-        font-weight: 600;
-        padding: 40px;
-        box-sizing: border-box;
-        z-index: 2;
-        line-height: 1.5;
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        display: flex; align-items: center; justify-content: center;
+        text-align: center; font-size: 16px; color: #86868b;
+        padding: 40px; box-sizing: border-box; z-index: 2; line-height: 1.5;
       }
 
-      /* 4. 图片本身：初始状态必须设为 top:0; left:0; 才能实现完全重叠 */
       .VPImage.image-src {
-        position: absolute !important;
-        top: 2 !important;
-        left: 2 !important;
-        margin: 0 !important; /* 💡 强制清除 VitePress 默认的 margin */
-        width: 100% !important;
-        height: 100% !important;
-        z-index: 3; /* 最顶层 */
-        border-radius: 40px !important;
+        position: absolute !important; top: 0 !important; left: 0 !important;
+        margin: 0 !important; width: 100% !important; height: 100% !important;
+        z-index: 3; border-radius: 40px !important;
         box-shadow: 0 20px 50px rgba(0,0,0,0.15) !important;
-        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important; /* 丝滑的苹果式动画 */
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
       }
 
-      /* 5. 悬停效果：向右下 45° 弹出 */
       .VPHero .image-container:hover .VPImage.image-src {
         transform: translate(105%, 105%) rotate(12deg) !important; 
         opacity: 0.2;
-        box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+      }
+
+      /* ============================================================
+        2. 📱 手机端适配逻辑 (当屏幕宽度小于 960px 时触发)
+        ============================================================ */
+      @media (max-width: 960px) {
+        /* 强制容器居中，并取消向右的偏移 */
+        .VPHero .image-container {
+          margin: 20px auto !important; /* 上下留空，水平居中 */
+          display: block !important;
+          width: 280px; /* 手机端缩小一点图片尺寸 */
+          height: 280px;
+        }
+
+        /* 核心：手机端取消图片划走的动效，避免在小屏幕上划出界 */
+        .VPHero .image-container:hover .VPImage.image-src {
+          transform: translateY(-10px) !important; /* 手机端改成微弱上浮即可 */
+          opacity: 1;
+        }
+
+        /* 让文字彩蛋在手机端也稍微缩放一点 */
+        .VPHero .image-container::after {
+          font-size: 14px;
+          padding: 30px;
+        }
       }
     `]
   ],
