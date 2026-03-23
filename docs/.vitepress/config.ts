@@ -1,69 +1,41 @@
-import { defineConfig } from 'vitepress'
+﻿import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // 💡 彻底静态化：取消所有位移(transform)效果，确保全设备显示一致
   head: [
     ['style', {}, `
-      /* 0. Hero 整体调整：完整解决方案 */
+      /* Hero 布局：标题左，图片右 */
       .VPHero {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 0px !important;
-      }
-      .VPHero .container { flex: 1 !important; }
-      .VPHero .image-container { 
-        flex: 0 0 450px !important;
-        min-height: 450px !important;
-        aspect-ratio: 1 / 1 !important;
-        margin-left: -60px !important;
-        margin-top: -60px !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
       }
 
-      /* 1. 图片容器 - 显示在右侧 */
-      /* 已移至上面的 .VPHero .image-container */
+      .VPHero .container { flex: 1; }
 
-      /* 2. 静态图片样式：1:1 正方形 */
+      /* 图片容器：1:1 正方形 */
+      .VPHero .image-container {
+        width: 400px;
+        height: 400px;
+      }
+
+      /* 图片：圆角显示 */
       .VPImage.image-src {
-        width: 100% !important;
-        max-width: 450px !important;
-        aspect-ratio: 1 / 1 !important;
-        object-fit: contain !important;
-        border-radius: 44px !important; 
-        box-shadow: 
-          0 10px 20px rgba(0,0,0,0.1), 
-          0 20px 50px rgba(0,0,0,0.15) !important; 
-        transition: all 0.4s ease !important;
-        transform: none !important;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        object-fit: cover;
       }
 
-      /* 3. 悬停反馈：取消“跑路”效果，改为原地轻微缩放 */
-      .VPImage.image-src:hover {
-        transform: scale(1.02) !important; /* 仅在原地轻微放大，不产生坐标位移 */
-        box-shadow: 
-          0 15px 30px rgba(0,0,0,0.12), 
-          0 30px 70px rgba(0,0,0,0.2) !important;
-      }
-
-      /* 4. 移动端兼容性补丁 */
-      @media (max-width: 960px) {
+      /* 手机端：上下布局 */
+      @media (max-width: 768px) {
         .VPHero {
-          flex-direction: column !important;
-          gap: 30px !important;
-        }
-        .VPHero .container {
-          order: 1 !important;
+          flex-direction: column;
+          gap: 24px;
         }
         .VPHero .image-container {
-          order: 2 !important;
-          flex: none !important;
-          min-height: auto !important;
-        }
-        .VPImage.image-src {
-          border-radius: 32px !important;
-          max-width: 320px !important;
-          aspect-ratio: 1 / 1 !important;
+          width: 280px;
+          height: 280px;
         }
       }
     `]
@@ -82,20 +54,20 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '📖 教程资源',
+        text: ' 教程资源',
         items: [
           { text: '精选教程汇总', link: '/guide/tutorials' },
         ]
       },
       {
-        text: '🤖 产品与硬件',
+        text: ' 产品与硬件',
         items: [
           { text: '主流产品汇总与对比', link: '/comparison/products' },
           { text: '核心硬件清单与选型', link: '/comparison/hardware' },
         ]
       },
       {
-        text: '💡 AI 模型相关',
+        text: ' AI 模型相关',
         items: [
           { text: '模型接入汇总与售价', link: '/models/pricing' },
         ]
