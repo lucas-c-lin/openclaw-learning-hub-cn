@@ -4,12 +4,22 @@ export default defineConfig({
   // 💡 彻底静态化：取消所有位移(transform)效果，确保全设备显示一致
   head: [
     ['style', {}, `
-      /* 1. 容器适配：回归标准流，解决手机端重叠问题 */
+      /* 0. Hero 整体调整：标题在左，图片在右 */
+      .VPHero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* 1. 图片容器 - 显示在右侧 */
       .VPHero .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 0; 
+        margin-left: 40px;
+        margin-right: 0;
+        flex: 0 0 auto;
       }
 
       /* 2. 静态图片样式：强化苹果式圆角与呼吸感阴影 */
@@ -34,12 +44,17 @@ export default defineConfig({
 
       /* 4. 移动端兼容性补丁 */
       @media (max-width: 960px) {
+        .VPHero {
+          flex-direction: column !important;
+        }
         .VPImage.image-src {
           border-radius: 32px !important;
           max-width: 280px !important;
         }
         .VPHero .image-container {
-          margin-top: 24px; /* 手机端标题下方留出间距 */
+          margin-top: 24px;
+          margin-left: 0;
+          margin-right: 0;
         }
       }
     `]

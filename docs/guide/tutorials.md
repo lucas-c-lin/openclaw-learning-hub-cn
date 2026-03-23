@@ -5,7 +5,9 @@
 ### 🌟 入门首选！！！
 
 #### OpenClaw 中文社区站
-[OpenClaw 中文社区]https://clawd.org.cn/
+[OpenClaw 中文社区](https://clawd.org.cn/)
+
+>*点击链接即可跳转*
 
 
 * [OpenClaw 官方文档 (CN)](https://example.com) —— **最权威**，虽然更新慢，但原理讲得最清。
