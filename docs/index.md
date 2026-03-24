@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "OpenClaw Learning Hub"
+  name: "OpenClaw 中文资源站"
   text: "中文资源精选汇总"
   tagline: "精选教程 · 产品对比 · 主机硬件 · 模型售价。<br>让开发更简单。"
   # 💡 增加以下图片配置

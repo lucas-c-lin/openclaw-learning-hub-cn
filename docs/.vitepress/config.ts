@@ -41,10 +41,30 @@ export default defineConfig({
     `]
   ],
   base: '/openclaw-learning-hub-cn/',
-  title: "OpenClaw Learning Hub",
+  title: "OpenClaw 中文资源站",
   description: "精选 OpenClaw 中文资源与硬件/模型对比指南",
   lang: 'zh-CN',
   themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            noResultsText: '无法找到相关结果',
+            resetButtonTitle: '清除搜索条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '精选教程', link: '/guide/tutorials' },
