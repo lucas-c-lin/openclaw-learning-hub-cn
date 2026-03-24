@@ -2,19 +2,24 @@
 
 本页汇总了目前市面上活跃的 OpenClaw 成品套件。
 
-## 📋 全量汇总
-* **厂家 A - 旗舰版**：包含 ESP32 主控、金属舵机、全套亚克力件。
-* **厂家 B - 教育版**：主打 4 自由度，适合学生入门。
-* **微雪 (Waveshare) 系列**：接口丰富，社区讨论度高。
-* **某开源 DIY 散件**：需自行购买零件，成本最低。
+⚠️ 注意：本页内容仅提供参考，请根据实际情况选择合适的产品。
+⚠️ 没有收任何广告费。
 
-## 📊 横向对比
-| 维度 | 厂家 A | 厂家 B | 微雪 |
-| :--- | :--- | :--- | :--- |
-| **上手难度** | ⭐ | ⭐⭐⭐ | ⭐⭐ |
-| **扩展性** | 极强 | 一般 | 强 |
-| **核心优势** | 稳固，适合深度开发 | 便宜，坏了不心疼 | 资料齐全 |
+## 腾讯系
 
----
-**💡 选购建议：**
-如果你是极客，选**微雪**；如果你是学生，选**厂家 B**。
+### 腾讯 QClaw
+
+[腾讯 QClaw](https://claw.guanjia.qq.com/)
+
+
+
+智普 AutoClaw: https://autoglm.zhipuai.cn/autoclaw
+Kimi Claw：https://kimi.moonshot.cn/claw
+MiniMax MaxClaw：https://api.minimax.chat/maxclaw
+腾讯 QClaw: https://claw.guanjia.qq.com/
+阿里 CoPaw：https://agentscope.aliyun.com/copaw
+腾讯 WorkBuddy：https://workbuddy.tencent.com
+网易 Lobster AI：https://lobsterai.youdao.com
+小米: https://www.miui.com/miclaw
+百度 DuClaw: https://cloud.baidu.com/product/duclaw.html
+字节火山引擎 ArcClaw: https://www.volcengine.com/experience/ark?mode=claw
