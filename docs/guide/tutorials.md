@@ -4,6 +4,12 @@
 
 >*点击链接即可跳转教程原网站*
 
+```mermaid
+flowchart TD
+    A(教程汇总) -->|青铜白银| D[关于什么是OpenClaw，以及如何部署]
+    A(教程汇总) -->|进阶必读| E[你必须了解的安全问题]
+    A(教程汇总) -->|成为王者| F[能够让你的龙虾更威风的Skills]
+```
 
 ## 🌟 入门首选！！
 
@@ -100,7 +106,7 @@ Github上面是这样介绍的：
 
 ### SkillHub 
 
-[SkillHub]https://skillhub.tencent.com/
+[SkillHub](https://skillhub.tencent.com/)
 
 网站自己介绍是“专为中国用户优化的 AI Skills 社区”。网站首页就有 *精选 TOP 50 AI Skills 榜单，从 ClawHub 生态中精选最值得安装的 50 个 AI Skills，国内高速镜像，一键加速安装。* 
 
