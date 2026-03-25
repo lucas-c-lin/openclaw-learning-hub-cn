@@ -1,25 +1,160 @@
-# 🤖 主流产品汇总与对比
+# 🇨🇳 中国大陆 OpenClaw 主流产品汇总与对比（2026年3月最新）
 
-本页汇总了目前市面上活跃的 OpenClaw 成品套件。
+> 🤖 **本汇总基于互联网最新官网内容及公开搜索结果**（截至2026年3月25日）。OpenClaw 指基于开源“龙虾”框架（本地/云端 AI 代理，可自主操作电脑、浏览器、IM 等）的成品套件。  
+> ⚠️ **注意**：价格、功能以官方实时为准，可能有公测/限量/企业专供差异；未收任何广告费，仅供参考。请根据实际需求测试。  
+> 📌 **补充**：用户提及的“飞书秒搭”已纳入（字节/飞书系），另根据搜索发现部分产品为 OpenClaw 托管/一键部署版，核心均为“零门槛养龙虾”。
 
-⚠️ 注意：本页内容仅提供参考，请根据实际情况选择合适的产品。
-⚠️ 没有收任何广告费。
+---
 
 ## 腾讯系
 
-### 腾讯 QClaw
+### [腾讯 QClaw](https://qclaw.qq.com/)（原 https://claw.guanjia.qq.com/）
+- **特点**：微信远程办公 AI 助手，支持自动部署、微信直连对话、远程操控电脑文件/浏览器/邮件、5000+ Skills 生态（ClawHub/GitHub）、专属记忆（“龙虾”个性化）、本地高效运行、可切换国产大模型。
+- **价格**：未提及（开放免费使用，无需邀请码）。
+- **应用场景**：远程办公、文件资料整理、邮件自定义、GitHub 项目自动开发、学术论文整理、天气提醒等个人/团队自动化任务（Mac & Windows）。
+- **提供接口**：Skills 市场扩展（随取随用），未提及标准开放 API/SDK。
+- **应用难度**：**极低**（三步上手：下载安装 → 扫码绑定微信 → 发指令），一键安装、零配置、可视化微信操作，无需代码。
 
-[腾讯 QClaw](https://claw.guanjia.qq.com/)
+### [腾讯 WorkBuddy](https://workbuddy.tencent.com)
+- **特点**：企业级 AI Agent 办公新范式（托管版），支持团队协作、权限管控、与 QClaw 生态互通。
+- **价格**：未提及（企业级可能按需付费/订阅）。
+- **应用场景**：企业内部办公自动化、团队任务协同、权限严格的业务流程。
+- **提供接口**：未提及具体 API（依托腾讯云生态）。
+- **应用难度**：**低**（托管版，无需本地部署，适合企业快速上线）。
 
+---
 
+## 智谱AI 系
 
-智普 AutoClaw: https://autoglm.zhipuai.cn/autoclaw
-Kimi Claw：https://kimi.moonshot.cn/claw
-MiniMax MaxClaw：https://api.minimax.chat/maxclaw
-腾讯 QClaw: https://claw.guanjia.qq.com/
-阿里 CoPaw：https://agentscope.aliyun.com/copaw
-腾讯 WorkBuddy：https://workbuddy.tencent.com
-网易 Lobster AI：https://lobsterai.youdao.com
-小米: https://www.miui.com/miclaw
-百度 DuClaw: https://cloud.baidu.com/product/duclaw.html
-字节火山引擎 ArcClaw: https://www.volcengine.com/experience/ark?mode=claw
+### [智普 AutoClaw](https://autoglm.zhipuai.cn/autoclaw)
+- **特点**：一键 OpenClaw 部署，支持飞书（Lark）IM 激活 AI 代理、对话中自主调用工具、本地执行 + 飞书实时同步、任务分解/克隆推进、完整上下文反馈。
+- **价格**：未提及。
+- **应用场景**：飞书协作环境下的复杂任务执行（如多步骤办公流程）。
+- **提供接口**：未提及。
+- **应用难度**：**极低**（一键激活，无需配置页面或任务管理系统，对话即任务）。
+
+---
+
+## 月之暗面（Moonshot AI）系
+
+### [Kimi Claw](https://kimi.moonshot.cn/claw)
+- **特点**：云端托管版 OpenClaw，通过 Kimi 直接访问，7×24 小时在线、长期记忆、5000+ ClawHub 社区技能、多平台支持（Web/iOS/Android），长文档处理能力强。
+- **价格**：未提及（Kimi Token 计费）。
+- **应用场景**：文案/科研自动化、复杂指令执行、日常办公代理。
+- **提供接口**：基于 OpenClaw Skills 生态，支持扩展。
+- **应用难度**：**极低**（免部署、云端即用，像普通 Kimi 聊天一样操作）。
+
+---
+
+## MiniMax 系
+
+### [MiniMax MaxClaw](https://api.minimax.chat/maxclaw)
+- **特点**：云端 Agent 能力（Agent Harness 自进化）、强 Coding/工程能力、复杂 Office 自动化（Excel/Word/PPT 多轮编辑）、全栈多模态（文本/语音/视频/图像/音乐）。
+- **价格**：开发者 Token 套餐（包月畅用，越用越划算）；搜索显示云端托管版约月费 39 元起。
+- **应用场景**：开发者构建智能应用、工作生活全场景自动化、创意生成与 Office 生产力提升。
+- **提供接口**：**是**（开放平台、API 文档齐全，一键接入主流工具，支持 MCP Server 等）。
+- **应用难度**：**极低**（开箱即用、一键接入、零门槛，可视化体验）。
+
+---
+
+## 阿里系
+
+### [阿里 CoPaw](https://agentscope.aliyun.com/copaw)
+- **特点**：基于 AgentScope 的企业级多 Agent 协作系统，聚焦钉钉生态、私有化部署，支持复杂任务团队协同（官网 503 暂无法访问，基于公开搜索补充）。
+- **价格**：未提及（企业级私有化，通常按资源/订阅）。
+- **应用场景**：企业内部多 Agent 协作、钉钉办公流程自动化。
+- **提供接口**：支持阿里云 API 集成（开发者友好）。
+- **应用难度**：**中等**（私有化部署，适合有 IT 团队的企业）。
+
+---
+
+## 网易系
+
+### [网易 Lobster AI](https://lobsterai.youdao.com)
+- **特点**：全场景本地 AI 代理、单指令多模态复杂结果、长期记忆+定时任务、可自定义多模型、桌面文件管理/数据分析/PPT 创建、Telegram/Discord 远程控制、MIT 开源、本地运行数据安全。
+- **价格**：未提及（本地开源免费）。
+- **应用场景**：工作生产力提升、学习/创意（如游戏、视频创作）、注重隐私的个人日常任务。
+- **提供接口**：未提及 API（MIT 开源，可自行审计/扩展）。
+- **应用难度**：**极低**（无需编程、单指令操作、安装简单、可视化界面）。
+
+---
+
+## 小米系
+
+### [小米 Miclaw](https://www.miui.com/miclaw)
+- **特点**：集成于 MIUI 系统（光子引擎、端侧隐私计算、AI 小爱同学等），支持跨端互联、软硬协同（官网指向 MIUI 14 AI 功能，Claw 具体能力未独立突出）。
+- **价格**：未提及（随小米设备/系统免费）。
+- **应用场景**：小米生态设备上的办公/生活自动化、跨设备互联（手机/平板/穿戴）。
+- **提供接口**：向第三方开发者开放内核能力（MAML/MORE 引擎）。
+- **应用难度**：**极低**（系统级可视化界面，无需额外安装，端侧易用）。
+
+---
+
+## 百度系
+
+### [百度 DuClaw](https://cloud.baidu.com/product/duclaw.html)
+- **特点**：7×24 小时在线个人超级助理、集成 GLM/MiniMax 等模型、支持 Claude Code 等 AI 开发工具、每月最高 18,000 次请求。
+- **价格**：首月特惠 ¥17.8（原价 ¥142），订阅模式（DuClaw + 千帆 Coding Plan），不支持退款。
+- **应用场景**：开发者 AI 开发、代码相关任务、个人超级助理构建。
+- **提供接口**：开发者支持强（适配多种 AI 工具）。
+- **应用难度**：**低**（订阅即用，适合开发者快速上手）。
+
+---
+
+## 字节系（火山引擎 + 飞书）
+
+### [字节火山引擎 ArcClaw](https://www.volcengine.com/experience/ark?mode=claw)
+- **特点**：7×24 在线专属 AI 助手、一键部署、零门槛唤醒、深度集成飞书（智能会议纪要、任务追踪、多维表格、档案提取）、字节原生协同（Doubao 模型）、多模型选择（GLM/MiniMax/Kimi）、Skills 安全拦截、私有托管。
+- **价格**：未提及。
+- **应用场景**：职场高效协同、会议/任务/表格管理、随时随地复杂任务处理。
+- **提供接口**：Skills 扩展支持。
+- **应用难度**：**极低**（一键部署、零门槛、可视化 LUI/终端兼容）。
+
+### [飞书妙搭 OpenClaw（秒搭）](https://miaoda.feishu.cn/)（推荐补充产品）
+- **特点**：飞书官方一键部署 OpenClaw（2 分钟“养虾”）、内置飞书官方插件、零配置接入机器人、完整记忆/个性/多 Agent 编排、能以用户身份读飞书/做任务/排日程、数据不出企业、AI 修 AI（对话修改）。
+- **价格**：限时免费领百万 Token/每日 150 万 Token 福利。
+- **应用场景**：飞书企业协作、快速搭建专属 AI 员工、文档/消息/日历/多维表格自动化。
+- **提供接口**：飞书原生 API 能力全开放（机器人权限）。
+- **应用难度**：**全网最低**（傻瓜式一键创建 → 1 分钟跳转对话，无需任何配置/技术基础）。
+
+---
+
+## 📊 对比表格
+
+| 厂家       | 产品              | 特点摘要                          | 价格                  | 应用场景                  | 接口支持          | 应用难度     | 链接 |
+|------------|-------------------|-----------------------------------|-----------------------|---------------------------|-------------------|--------------|------|
+| 腾讯系    | QClaw            | 微信直连 + Skills 生态 + 本地记忆 | 免费（开放）         | 远程办公/文件/邮件       | Skills 市场      | 极低（3步） | [🔗](https://qclaw.qq.com/) |
+| 腾讯系    | WorkBuddy        | 企业托管 + 权限管控              | 企业订阅             | 团队办公自动化           | 腾讯云生态       | 低          | [🔗](https://workbuddy.tencent.com) |
+| 智谱AI    | AutoClaw         | 飞书一键激活 + 本地同步          | 未提及               | 飞书复杂任务             | 未提及           | 极低（一键）| [🔗](https://autoglm.zhipuai.cn/autoclaw) |
+| 月之暗面  | Kimi Claw        | 云端托管 + 5000+技能 + 多平台   | Token 计费           | 文案/科研/日常代理       | Skills 生态      | 极低（免部署） | [🔗](https://kimi.moonshot.cn/claw) |
+| MiniMax   | MaxClaw          | Office 多轮编辑 + Coding Agent   | ≈月费 39 元 / Token | 开发者 & Office 生产力   | **开放 API**     | 极低（零门槛） | [🔗](https://api.minimax.chat/maxclaw) |
+| 阿里系    | CoPaw            | 钉钉私有化 + 多 Agent 企业版     | 企业订阅             | 企业协作流程             | 阿里云 API       | 中等        | [🔗](https://agentscope.aliyun.com/copaw) |
+| 网易      | Lobster AI       | 本地开源 + 多模态 + 远程控制     | 免费（MIT 开源）     | 工作/学习/创意 + 隐私    | 开源扩展         | 极低（单指令） | [🔗](https://lobsterai.youdao.com) |
+| 小米      | Miclaw           | MIUI 系统集成 AI 端侧能力        | 设备随赠             | 小米生态跨设备           | 内核开放         | 极低（系统级） | [🔗](https://www.miui.com/miclaw) |
+| 百度      | DuClaw           | 在线超级助理 + 18k 请求/月       | 首月 ¥17.8           | 开发者代码任务           | 开发者工具       | 低          | [🔗](https://cloud.baidu.com/product/duclaw.html) |
+| 字节系    | ArcClaw          | 飞书原生 + 一键云部署 + 多模型  | 未提及               | 会议/任务/表格管理       | Skills 扩展      | 极低（零门槛） | [🔗](https://www.volcengine.com/experience/ark?mode=claw) |
+| 字节/飞书 | 飞书妙搭 OpenClaw| 2分钟一键养虾 + 飞书原生插件    | 限时免费百万 Token  | 飞书企业 AI 员工         | 飞书原生 API     | **最低**（1分钟） | [🔗](https://miaoda.feishu.cn/) |
+
+**表格说明**：
+- **难度排序**：飞书妙搭 ≈ QClaw/Kimi/ArcClaw（最易） ＜ Lobster/MaxClaw ＜ 其余。
+- **价格趋势**：本地/开源免费为主，云端托管多为 Token 或低月费，企业版订阅。
+- **共性**：几乎全部强调“零代码、可视化、IM 直连”，核心差异在生态（微信/飞书/钉钉）和部署方式（本地 vs 云端）。
+
+---
+
+**Mermaid 产品分类概览**（辅助理解厂家归属）：
+```mermaid
+graph TD
+    A[OpenClaw 主流产品] --> B[腾讯系]
+    A --> C[智谱AI]
+    A --> D[月之暗面]
+    A --> E[MiniMax]
+    A --> F[阿里系]
+    A --> G[网易]
+    A --> H[小米]
+    A --> I[百度]
+    A --> J[字节系]
+    B --> B1[QClaw]
+    B --> B2[WorkBuddy]
+    J --> J1[ArcClaw]
+    J --> J2[飞书妙搭]
